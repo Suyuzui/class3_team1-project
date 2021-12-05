@@ -20,4 +20,5 @@ from cs3team1 import views as cs3team1_views
 urlpatterns = [
     path('', cs3team1_views.index),
     path('ingredients',cs3team1_views.ingredient),
+    path('menu', cs3team1_views.menu),
 ]
