@@ -2,9 +2,37 @@
 <html>
   <head>    
     <title>食材選び</title>
-    <meta charset="UTF-8"></head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ingredients.css' %}">
+  </head>
   <body>
-    <h1 >食材を選んで下さい</h1>
+    <h1>食材を最大3つ選んで下さい</h1>
+    <div class="sidebar">
+      <p>ホーム</p>
+      <p>オススメ</p>
+      <p>献立</p>
+    </div>
+    <span class="categories">
+      <p>野菜</p>
+      <p>肉</p>
+      <p>果物</p>
+      <p>調味料</p>
+    </span>
+    <div class="vegetables">
+      <p>にんじん</p>
+      <p>なす</p>
+      <p>じゃがいも</p>
+      <p>大根</p>
+      <p>玉ねぎ</p>
+      <p>きゅうり</p>
+      <p>トマト</p>
+      <p>ズッキーニ</p>
+      <p>サツマイモ</p>
+    </div>
+
+
+
     
   </body>
 </html>

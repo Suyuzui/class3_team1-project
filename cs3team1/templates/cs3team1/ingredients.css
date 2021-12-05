@@ -1,0 +1,17 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.categories {
+    display: flex;
+    flex-direction:row;
+
+}
+
+.vegetables {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
