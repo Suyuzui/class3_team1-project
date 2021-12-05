@@ -5,3 +5,5 @@ from django.http import HttpResponse
 def index(request):
 	return render(request, 'cs3team1/home.html')
 
+def ingredient(request):
+	return render(request, 'cs3team1/ingredients.html')
