@@ -1,7 +1,6 @@
 .sidebar {
     display: flex;
-    flex-direction: column;
-    float: left;
+    float: top;
 }
 
 .categories {
@@ -15,3 +14,4 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
+
