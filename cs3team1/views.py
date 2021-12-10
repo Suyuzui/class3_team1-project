@@ -13,3 +13,6 @@ def menu(request):
 
 def recommendation(request):
 	return render(request, 'cs3team1/recommendation.html')
+
+def recipe(request):
+	return render(request, 'cs3team1/recipe.html')
