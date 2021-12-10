@@ -10,3 +10,6 @@ def ingredient(request):
 
 def menu(request):
 	return render(request, 'cs3team1/menu.html')
+
+def recommendation(request):
+	return render(request, 'cs3team1/recommendation.html')
