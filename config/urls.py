@@ -21,4 +21,5 @@ urlpatterns = [
     path('', cs3team1_views.home),
     path('ingredients',cs3team1_views.ingredient),
     path('menu', cs3team1_views.menu),
+    path('admin/',admin.site.urls),
 ]

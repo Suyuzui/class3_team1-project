@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>    
@@ -6,5 +7,29 @@
   <body>
     <h1 >Menu</h1>
     <p>Create menus and shopping lists.</p>
+    <form action="{% url 'index' %}" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="titleInput">Title</label>
+        <input id="titleInput" name="title" type="text" placeholder="Input title">
+      </div>
+      <div>
+        <label for="textInput">Text</label>
+        <textarea id="textInput" name="text" rows="3"></textarea>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <br>
+
+    {% for article in articles %}
+    <a herf="{% url 'detail' article.%}">{{ article.title }}</a>
+    <small>[{{ article.posted_at }}]</small>
+    <div>
+      {{ article.body | }}
+    </div>
+    {% endfor %}
   </body>
 </html>
