@@ -1,35 +1,35 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>    
-    <title>Menu</title>
-    <meta charset="UTF-8"></head>
-  <body>
-    <h1 >Menu</h1>
-    <p>Create menus and shopping lists.</p>
-    <form action="{% url 'index' %}" method="post">
-      {% csrf_token %}
-      <div>
-        <label for="titleInput">Title</label>
-        <input id="titleInput" name="title" type="text" placeholder="Input title">
-      </div>
-      <div>
-        <label for="textInput">Text</label>
-        <textarea id="textInput" name="text" rows="3"></textarea>
-      </div>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+{% extends "cs3team1/base.html" %}
 
-    <br>
+{% block content %}
 
-    {% for article in articles %}
-    <a herf="{% url 'detail' article.%}">{{ article.title }}</a>
-    <small>[{{ article.posted_at }}]</small>
-    <div>
-      {{ article.body | }}
-    </div>
+<div class="row my-4">
+  <div class="col-md-8">
+    {% for post in post_data %}
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 cass="card-title">{{ post.title }}</h2>
+          <p cass="card-text">{{ post.content|truncatechars:100 }}</p>
+          <div class="btn btn-warnig">詳細</div>
+        </div>
+        <div class="card-footer text-muted">
+          {{ post.created|date }} by {{ post.author }}
+        </div>
+        <a href="" class="stretched-link"></a>
+      </div>
     {% endfor %}
-  </body>
-</html>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card">
+      <h5 class="card-header">この献立表について</h5>
+      <div class="card-body"> 
+        <p>献立表</p>
+        <p class="mb-0">
+          毎日の献立と買い物リストを記入することが出来ます。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
