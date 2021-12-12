@@ -19,7 +19,7 @@ from cs3team1 import views as cs3team1_views
 
 urlpatterns = [
     path('', cs3team1_views.home),
-    path('ingredients',include('cs3team1.urls'),name='ingredient'),
+    path('ingredients',cs3team1_views.ingredient,name='ingredient'),
     path('menu', cs3team1_views.menu),
     path('admin/',admin.site.urls),
 ]
