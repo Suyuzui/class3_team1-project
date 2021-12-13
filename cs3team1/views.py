@@ -24,3 +24,9 @@ class IndezView(View):
 		return render(request, 'cs3team1/menu.html', {
 			'post_data': post_data
 		})
+
+def update_ingredients(request, ingredients_id):
+	return HttpResponse("ingredients_id: {}".format(ingredients_id))
+
+def update_recipe(request, recipe_id):
+	return HttpResponse("recipe_id: {}".format(recipe_id))
