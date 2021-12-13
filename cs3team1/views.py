@@ -18,7 +18,7 @@ def recommendation(request):
 def recipe(request):
 	return render(request, 'cs3team1/recipe.html')
 
-class IndezView(View):
+class IndexView(View):
 	def get(self, request, *args, **kwargs):
 		post_data = Post.objects.order_by('-id')
 		return render(request, 'cs3team1/menu.html', {
@@ -30,3 +30,10 @@ def update_ingredients(request, ingredients_id):
 
 def update_recipe(request, recipe_id):
 	return HttpResponse("recipe_id: {}".format(recipe_id))
+
+class PostDetailView(View):
+	def get(self, request, *args, **kwargs):
+		post_data = Post.objects.get(id=self.kwargs['pk'])
+		return render(request, 'cs3team1/post_detail.html', {
+			'post_data': post_data
+		})
