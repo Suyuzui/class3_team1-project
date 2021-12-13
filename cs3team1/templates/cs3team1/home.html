@@ -1,20 +1,40 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>    
     <title>Home</title>
-    <meta charset="UTF-8"></head>
+    <meta charset="UTF-8">
     <link href="{% static 'blog/css/home.css' %}" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/css/6-1-6.css">
+    <script type="text/javascript" src="{% static 'blog/js/home.js' %}"></script>
+
+  </head>
+  
   <body>
-    <nav>
-      <ul>
-        <li>HOME</li>
-        <li>食材</li>
-        <li>レシピ</li>
-        <li>履歴</li>
+    <nav class="menu">
+      <ul class="menu">
+        <li class="menu">HOME</li>
+        <li class="menu">食材</li>
+        <li class="menu">レシピ</li>
+        <li class="menu">履歴</li>
       </ul>
     </nav>
-    
+
+    <ul class="slider">
+      <li><img src="{% static 'blog/img/sample1.png' %}" alt="sample1"></li>
+      <li><img src="{% static 'blog/img/sample2.png' %}" alt="sample2"></li>
+      <li><img src="{% static 'blog/img/sample3.png' %}" alt="sample3"></li>
+      <li><img src="{% static 'blog/img/sample4.png' %}" alt="sample4"></li>
+    </ul>
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/js/6-1-6.js"></script>
+
     <h1 >Home</h1>
     
   </body>
