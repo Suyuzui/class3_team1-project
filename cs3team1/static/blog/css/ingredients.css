@@ -14,6 +14,7 @@
 
 .margin {
     margin-left: 5em;
+    margin-right: 5em;
 }
 
 #center {
@@ -38,62 +39,62 @@
 } 
 
 /*tabの形状*/
-  .categories li a{
+.categories li a{
     display: block;
     background:#ddd;
     margin:0 2px;
     padding:10px 20px;
-  }
-  /*liにactiveクラスがついた時の形状*/
-  .categories li.active a{
+}
+/*liにactiveクラスがついた時の形状*/
+.categories li.active a{
     background:#fff;
-  }
+}
   
-  /*vegetablesにis-activeというクラスがついた時の形状*/
-  .vegetables.is-active {
-      display: block;/*表示*/
-      animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-  }
+/*vegetablesにis-activeというクラスがついた時の形状*/
+.vegetables.is-active {
+  display: block;/*表示*/
+  animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
   
-  @keyframes displayAnime{
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+@keyframes displayAnime{
+  from {
+    opacity: 0;
   }
-  
-  /*========= レイアウトのためのCSS ===============*/
-  
-  body{
-    background:#eee;
+  to {
+    opacity: 1;
   }
+}
   
-  ul{
-    list-style:none;
-  }
+/*========= レイアウトのためのCSS ===============*/
   
-  a{
-    color:#333;
-    text-decoration: none;
-  }
-  
-  .wrapper{
-    width:100%;
-    max-width: 960px;
-    margin:30px auto;
-      background:#fefefe;
-  }
-  
-  .vegetables h2{
-    font-size:1.3rem;
-    margin:0 0 20px 10px;
-  }
-  
-  .vegetables li{
-    padding: 10px; 
-    border-bottom: 1px solid #ddd;
-  }
+body{
+  background:#eee;
+}
+
+ul{
+  list-style:none;
+}
+
+a{
+  color:#333;
+  text-decoration: none;
+}
+
+.wrapper{
+  width:100%;
+  max-width: 960px;
+  margin:30px auto;
+    background:#fefefe;
+}
+
+.vegetables h2{
+  font-size:1.3rem;
+  margin:0 0 20px 10px;
+}
+
+.vegetables li{
+  padding: 10px; 
+  border-bottom: 1px solid #ddd;
+}
