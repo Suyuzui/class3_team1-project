@@ -9,12 +9,12 @@
   </head>
   <body>
     
-    <nav class="menu">
+    <nav>
       <ul class="menu">
-        <li class="menu">HOME</li>
-        <li class="menu">食材</li>
-        <li class="menu">レシピ</li>
-        <li class="menu">履歴</li>
+        <li class="menu1"><a href="{% url 'home' %}">HOME</a></li>
+        <li class="menu"><a href="{% url 'ingredient' %}">食材</a></li>
+        <li class="menu"><a href="{% url 'recipe' %}">おすすめレシピ</a></li>
+        <li class="menu"><a href="{% url 'home' %}">履歴</a></li>
       </ul>
     </nav>
 
