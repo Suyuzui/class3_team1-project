@@ -1,5 +1,11 @@
-.topmenu {
+.header {
     display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    padding: 10em;
+    background-color: #000000;
+    color: #ffffff;
     margin-left: 10em;
     float: top;
 }
