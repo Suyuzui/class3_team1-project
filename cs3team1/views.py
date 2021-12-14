@@ -38,9 +38,9 @@ class PostDetailView(View):
 		post_data = Post.objects.get(id=self.kwargs['pk'])
 		return render(request, 'cs3team1/post_detail.html', {
 			'post_data': post_data
-		})
+		}) 
 
-class CreatePostView(View):
+class CreatePostView(LoginRequiredMixin, View):
 	def get(self, request, *args, **kwargs):
 		form = PostForm(request.POST or None)
 		return render(request, 'cs3team1/post_form.html',{
