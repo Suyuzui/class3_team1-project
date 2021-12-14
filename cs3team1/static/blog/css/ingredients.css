@@ -52,7 +52,10 @@
   
 /*vegetablesにis-activeというクラスがついた時の形状*/
 .vegetables.is-active {
-  display: block;/*表示*/
+  display: grid;/*表示*/
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30px 30px 30px;
+  gap: 10px;
   animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -86,15 +89,10 @@ a{
   width:100%;
   max-width: 960px;
   margin:30px auto;
-    background:#fefefe;
+  background:#fefefe;
 }
 
-.vegetables h2{
+.vegetables h3{
   font-size:1.3rem;
   margin:0 0 20px 10px;
-}
-
-.vegetables li{
-  padding: 10px; 
-  border-bottom: 1px solid #ddd;
 }
