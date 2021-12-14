@@ -20,14 +20,14 @@
                         <a class="nav-link" href="{% url 'post_new' %}">投稿</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cs3team1/menu.html">ログアウト</a>
+                        <a class="nav-link" href="">ログアウト</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="cs3team1/menu.html">サインアップ</a>
+                        <a class="nav-link" href="">サインアップ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cs3team1/menu.html">ログイン</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">ログイン</a>
                     </li>
                 {% endif %}
             </ul>

@@ -95,3 +95,9 @@ class PostDeleteView(LoginRequiredMixin, View):
 		post_data = Post.objects.get(id=self.kwargs['pk'])
 		post_data.delete()
 		return redirect('index') 	
+
+def accounts(request):
+	return render(request, 'menu/accounts/login.html')
+
+def allauth(request):
+	return render(request, 'menu/accounts/login.html')
