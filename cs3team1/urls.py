@@ -9,5 +9,6 @@ urlpatterns = [
     path('recommendation/<int:ingredients_id>', views.recommendation, name='recommendation'),
     path('recipe', views.recipe, name='recipe'),
     path('menu', views.IndexView.as_view(), name='index'),
-    path('menu/post/<int:pk>', views.PostDetailView.as_view(), name='post_detail')
+    path('menu/post/<int:pk>/', views.PostDetailView.as_view(), name='post_detail'),
+    path('menu/post/new', views.CreatePostView.as_view(), name='post_new')
 ]

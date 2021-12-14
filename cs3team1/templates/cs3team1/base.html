@@ -17,7 +17,7 @@
                 </li>
                 {% if user.is_authenticreated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="cs3team1/menu.html">投稿</a>
+                        <a class="nav-link" href="{% url 'post_new' %}">投稿</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cs3team1/menu.html">ログアウト</a>
