@@ -24,4 +24,6 @@ urlpatterns = [
     path('recommendation', cs3team1_views.recommendation),
     path('recipe', cs3team1_views.recipe),
     path('admin/',admin.site.urls),
+    path('menu/accounts/', include('cs3team1.urls') ),
+    path('menu/accounts/', include('allauth.urls') ),
 ]
