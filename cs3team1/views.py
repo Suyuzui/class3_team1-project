@@ -31,7 +31,10 @@ def update_ingredients(request, ingredients_id):
 	return HttpResponse("ingredients_id: {}".format(ingredients_id))
 
 def update_recipe(request, recipe_id):
-	return HttpResponse("recipe_id: {}".format(recipe_id))
+	context = {
+		"recipe_id": recipe_id
+	}
+	return render(request, "cs3team1/recipe.html", context)
 
 class PostDetailView(View):
 	def get(self, request, *args, **kwargs):
