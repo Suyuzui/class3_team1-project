@@ -10,12 +10,12 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="cs3team1/menu.html">献立表</a>
+            <a class="navbar-brand" href="/menu">献立表</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="cs3team1/menu.html">献立表</a>
+                    <a class="nav-link" href="/menu">献立表</a>
                 </li>
-                {% if user.is_authenticreated %}
+                {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'post_new' %}">投稿</a>
                     </li>
