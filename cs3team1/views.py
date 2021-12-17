@@ -15,10 +15,22 @@ def menu(request):
 	return render(request, 'cs3team1/menu.html')
 
 def recommendation(request):
-	return render(request, 'cs3team1/recommendation.html')
+	context = {
+		"recipes": [
+			{
+				"id": 1,
+				"title": "レシピ1",
+				"body": "sample"
+			}
+		]
+	}
+	return render(request, 'cs3team1/recommendation.html', context)
 
-def recipe(request):
-	return render(request, 'cs3team1/recipe.html')
+def recipe(request, recipe_id):
+	context = {
+		"recipe_id": recipe_id
+	}
+	return render(request, 'cs3team1/recipe.html', context)
 
 class IndexView(View):
 	def get(self, request, *args, **kwargs):
@@ -31,10 +43,7 @@ def update_ingredients(request, ingredients_id):
 	return HttpResponse("ingredients_id: {}".format(ingredients_id))
 
 def update_recipe(request, recipe_id):
-	context = {
-		"recipe_id": recipe_id
-	}
-	return render(request, "cs3team1/recipe.html", context)
+	return HttpResponse("recipe_id: {}".format(recipe_id))
 
 class PostDetailView(View):
 	def get(self, request, *args, **kwargs):
