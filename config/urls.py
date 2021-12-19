@@ -20,10 +20,10 @@ from cs3team1 import views as cs3team1_views
 urlpatterns = [
     path('', include('cs3team1.urls')),
     path('ingredients',cs3team1_views.ingredient,name='ingredient'),
-    path('menu', include('cs3team1.urls')),
+    #path('menu', cs3team1_views.menu,name='menu'),
     path('recommendation', cs3team1_views.recommendation),
     path('recipe', cs3team1_views.recipe),
     path('admin/',admin.site.urls),
-    path('menu/accounts/', include('cs3team1.urls') ),
-    path('menu/accounts/', include('allauth.urls') ),
+    path('accounts/', include('cs3team1.urls') ),
+    path('accounts/', include('allauth.urls') ),
 ]
