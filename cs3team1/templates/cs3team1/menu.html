@@ -1,4 +1,5 @@
 {% extends "cs3team1/home.html" %}
+{% load widget_tweaks %}
 {% block content %}
 
 <div class="row my-4">
@@ -16,19 +17,7 @@
         <a href="{% url 'post_detail' post.id %}" class="stretched-link"></a>
       </div>
     {% endfor %}
-  </div>
 
-  <div class="col-md-4">
-    <div class="card">
-      <h5 class="card-header">この献立表について</h5>
-      <div class="card-body"> 
-        <p>献立表</p>
-        <p class="mb-0">
-          毎日の献立と買い物リストを記入することが出来ます。
-        </p>
-      </div>
-    </div>
-  </div>
 </div>
 
 {% endblock %}

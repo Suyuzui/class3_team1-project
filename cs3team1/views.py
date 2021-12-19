@@ -32,7 +32,7 @@ def recipe(request, recipe_id):
 class IndexView(View):
 	def get(self, request, *args, **kwargs):
 		post_data = Post.objects.order_by('-id')
-		return render(request, 'cs3team1/home.html', {
+		return render(request, 'cs3team1/menu.html', {
 			'post_data': post_data
 		})
 
@@ -109,5 +109,5 @@ class PostDeleteView(LoginRequiredMixin, View):
 	def post(self, request, *args, **kwargs):
 		post_data = Post.objects.get(id=self.kwargs['pk'])
 		post_data.delete()
-		return redirect('index') 	
+		return redirect('home') 	
 
