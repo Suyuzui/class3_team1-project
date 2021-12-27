@@ -16,14 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from cs3team1 import views as cs3team1_views
-
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('', include('cs3team1.urls')),
     path('ingredients',cs3team1_views.ingredient,name='ingredient'),
-    #path('menu', cs3team1_views.menu,name='menu'),
     path('recommendation', cs3team1_views.recommendation),
     path('recipe', cs3team1_views.recipe),
     path('admin/',admin.site.urls),
     path('accounts/', include('cs3team1.urls') ),
     path('accounts/', include('allauth.urls') ),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

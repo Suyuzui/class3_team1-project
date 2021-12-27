@@ -103,3 +103,16 @@ div.main{
 .form-control:focus{
     box-shadow: none;
 }
+
+.index-imge{
+    object-fit: cover;
+    width: 50%;
+    height: 180px;
+
+}
+
+.detail-img{
+    object-fit: cover;
+    width: 50%;
+    height: 400px;
+}
