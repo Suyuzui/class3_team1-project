@@ -116,3 +116,12 @@ div.main{
     width: 50%;
     height: 400px;
 }
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: orange;
+}
