@@ -3,11 +3,10 @@ from django.utils import timezone
 from django.conf import settings
 
 
-class Category(models.Model):
-    name = models.CharField('カテゴリ', max_length=100)
-
-    def __str__(self):
-        return self.name
+#class Category(models.Model):
+    #name = models.CharField('カテゴリ', max_length=100)
+    #def __str__(self):
+        #return self.name
 
 # Create your models here.
 class Post(models.Model):
