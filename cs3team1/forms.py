@@ -1,4 +1,4 @@
-#from typing import List
+from typing import List
 from django import forms
 from .models import Category
 
