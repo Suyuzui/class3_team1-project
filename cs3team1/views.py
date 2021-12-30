@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import View
-from .models import Post, Category
+from .models import Post #,Category
 from .forms import PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q, query
@@ -68,8 +68,8 @@ class CreatePostView(LoginRequiredMixin, View):
 			post_data.author = request.user
 			post_data.title = form.cleaned_data['title']
 			category = form.cleaned_data['category']
-			category_data = Category.objects.get(name=category)
-			post_data.category = category_data
+			#category_data = Category.objects.get(name=category)
+			#post_data.category = category_data
 			post_data.content = form.cleaned_data['content']
 			if request.FILES:
 				post_data.image = request.FILES.get('image')
@@ -103,8 +103,8 @@ class PostEditView(LoginRequiredMixin, View):
 			post_data.author = request.user
 			post_data.title = form.cleaned_data['title']
 			category = form.cleaned_data['category']
-			category_data = Category.objects.get(name=category)
-			post_data.category = category_data
+			#category_data = Category.objects.get(name=category)
+			#post_data.category = category_data
 			post_data.content = form.cleaned_data['content']
 			if request.FILES:
 				post_data.image = request.FILES.get('image')
@@ -126,8 +126,8 @@ class PostDeleteView(LoginRequiredMixin, View):
 		post_data.delete()
 		return redirect('home') 	
 
-class CategoryView(View):
-	def get(self, request, *args, **kwargs):
+#class CategoryView(View):
+	#def get(self, request, *args, **kwargs):
 		category_data =Category.objects.get(name=self.kwargs['category'])
 		post_data = Post.objects.order_by('-id').filter(category=category_data)
 		return render(request, 'cs3team1/menu.html', {
