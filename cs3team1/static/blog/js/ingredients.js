@@ -3,7 +3,7 @@ function GethashID (hashIDName){
   if(hashIDName){
     //タブ設定
     $('.categories li').find('a').each(function() { //タブ内のaタグ全てを取得
-      var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得 
+      let idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得 
       if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
         let parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
         $('.categories li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
@@ -19,14 +19,14 @@ function GethashID (hashIDName){
 
   //タブをクリックしたら
   $('.categories a').click(function() {
-    var idName = $(this).attr('href'); //タブ内のリンク名を取得  
-    GethashID (idName);//設定したタブの読み込みと
+    let idOfName = $(this).attr('href'); //タブ内のリンク名を取得  
+    GethashID (idOfName);//設定したタブの読み込みと
     return false;//aタグを無効にする
   });
   
   
   // 上記の動きをページが読み込まれたらすぐに動かす
-  $(document).ready(function () {
+  $(window).on('load',function () {
     $('.categories li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
     $('.vegetables:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
     let hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
