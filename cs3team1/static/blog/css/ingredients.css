@@ -17,7 +17,7 @@
     margin-right: 5em;
 }
 
-#center {
+.center {
     text-align: center;
 }
 
@@ -34,28 +34,28 @@
 .vegetables {
     display: none;/*はじめは非表示*/
     opacity: 0;/*透過0*/
-    background: #fff;
+    background: #ffffff;
     padding:50px 20px;
 } 
 
 /*tabの形状*/
 .categories li a{
     display: block;
-    background:#ddd;
+    background:#dddddd;
     margin:0 2px;
     padding:10px 20px;
 }
 /*liにactiveクラスがついた時の形状*/
 .categories li.active a{
-    background:#fff;
+    background:#ffffff;
 }
   
 /*vegetablesにis-activeというクラスがついた時の形状*/
 .vegetables.is-active {
   display: grid;/*表示*/
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 30px 30px 30px;
-  gap: 10px;
+  grid-template-rows: 50px 50px 50px;
+  gap: 50px;
   animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -69,11 +69,12 @@
     opacity: 1;
   }
 }
+
   
 /*========= レイアウトのためのCSS ===============*/
   
 body{
-  background:#eee;
+  background:#eeeeee;
 }
 
 ul{
@@ -81,7 +82,7 @@ ul{
 }
 
 a{
-  color:#333;
+  color:#333333;
   text-decoration: none;
 }
 
@@ -96,3 +97,5 @@ a{
   font-size:1.3rem;
   margin:0 0 20px 10px;
 }
+
+/*------------------------------------------------*/

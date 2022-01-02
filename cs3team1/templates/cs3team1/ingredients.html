@@ -5,55 +5,66 @@
     <title>食材選び</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/ingredients.css' %}">
-    <script src="{% static 'blog/js/ingredients.js' %}"></script>
     <script src="{% static 'https://code.jquery.com/jquery-3.4.1.min.js' %}" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="{% static 'blog/js/ingredients.js' %}"></script>
   </head>
   <body>
     <div class="header">
-      <p class="margin">ホーム</p>
-      <p class="margin">食材</p>
-      <p class="margin">オススメ</p>
-      <p class="margin">献立</p>
+      <p class="margin"><a href="{% url 'home' %}">HOME</a></p>
+      <p class="margin"><a href="{% url 'ingredient' %}">食材</a></p>
+      <p class="margin"><a href="{% url 'home' %}">履歴</a></p>
+      {% if user.is_authenticated %}
+      <p class="margin"><a href="{% url 'post_new' %}">献立表の投稿</a></p>
+      <p class="margin"><a href="{% url 'account_logout' %}">ログアウト</a></p>
+      {% else %}
+      <p class="margin"><a href="{% url 'account_signup' %}">サインアップ</a></p>
+      <p class="margin"><a href="{% url 'account_login' %}">ログイン</a></p>
+      {% endif %}
     </div>
     <br>
     <br>
     <br>
-    <h2 id="center">食材を1つ選んで下さい</h2>
+    <h2 class="center">食材を1つ選んで下さい</h2>
     <div class="wrapper">
       <ul class="categories">
-        <li><a href="#vegetables">野菜</a></li>
+        <li class="active"><a href="#vegetables">野菜</a></li>
         <li><a href="#meats">肉</a></li>
         <li><a href="#fish">魚</a></li>
         <li><a href="#fruits">果物</a></li>
         <li><a href="#tastes">調味料</a></li>
       </ul>
-      <div id="vegetables" class="vegetables">
-        <h3>野菜</h3>
-        <ul>
-          <li>にんじん</li>
-          <li>なす</li>
-          <li>じゃがいも</li>
-          <li>大根</li>
-          <li>玉ねぎ</li>
-          <li>きゅうり</li>
-          <li>トマト</li>
-          <li>ピーマン</li>
-          <li>パプリカ</li>
-          <li>長ネギ</li>
-          <li>サツマイモ</li>
-          <li>小松菜</li>
-          <li>白菜</li>
-          <li>キャベツ</li>
-          <li>ほうれん草</li>
-          <li>ブロッコリー</li>
-          <li>アスパラガス</li>
-          <li>かぼちゃ</li>
-          <li>オクラ</li>
+      <div id="vegetables">
+        <h2 class="center">野菜</h2>
+        <ul class="vegetables is-active">
+          <li><img src="{%static 'blog/img/vegetables/ninjin_carrot.png' %}" width="50" height="50"><br>にんじん</li>
+          <li><img src="{%static 'blog/img/vegetables/nasu_eggplant.png' %}" width="50" height="50"><br>なす</li>
+          <li><img src="{%static 'blog/img/vegetables/jagaimo_poteto.png' %}" width="50" height="50"><br>じゃがいも</li>
+          <li><img src="{%static 'blog/img/vegetables/daikon_radish.png' %}" width="50" height="50"><br>大根</li>
+          <li><img src="{%static 'blog/img/vegetables/tamanegi_onion.png' %}" width="50" height="50"><br>玉ねぎ</li>
+          <li><img src="{%static 'blog/img/vegetables/kyuuri_cucumber.png' %}" width="50" height="50"><br>きゅうり</li>
+          <li><img src="{%static 'blog/img/vegetables/tomato_red.png' %}" width="50" height="50"><br>トマト</li>
+          <li><img src="{%static 'blog/img/vegetables/piman_greenpepper.png' %}" width="50" height="50"><br>ピーマン</li>
+          <li><img src="{%static 'blog/img/vegetables/paprika.png' %}" width="50" height="50"><br>パプリカ</li>
+          <li><img src="{%static 'blog/img/vegetables/negi_green_onion.png' %}" width="50" height="50"><br>長ネギ</li>
+          <li><img src="{%static 'blog/img/vegetables/satsumaimo_sweetpotato.png' %}" width="50" height="50"><br>サツマイモ</li>
+          <li><img src="{%static 'blog/img/vegetables/vegetable_komatsuna.png' %}" width="50" height="50"><br>小松菜</li>
+          <li><img src="{%static 'blog/img/vegetables/hakusai.png' %}" width="50" height="50"><br>白菜</li>
+          <li><img src="{%static 'blog/img/vegetables/vegetable_cabbage2.png' %}" width="50" height="50"><br>キャベツ</li>
+          <li><img src="{%static 'blog/img/vegetables/hourensou_spinach.png' %}" width="50" height="50"><br>ほうれん草</li>
+          <li><img src="{%static 'blog/img/vegetables/broccoli.png' %}" width="50" height="50"><br>ブロッコリー</li>
+          <li><img src="{%static 'blog/img/vegetables/asparagus.png' %}" width="50" height="50"><br>アスパラガス</li>
+          <li><img src="{%static 'blog/img/vegetables/kabocha.png' %}" width="50" height="50"><br>かぼちゃ</li>
+          <li><img src="{%static 'blog/img/vegetables/okura_gombo.png' %}" width="50" height="50"><br>オクラ</li>
         </ul> 
       </div>
       <div id="meats" class="vegetables">
-        <h3>肉</h3>
+        <h3 class="center">肉</h3>
         <ul>
+          <li>豚バラ(ブロック)</li>
+          <li>豚ロース</li>
+          <li>牛ロース</li>
+          <li>鶏もも</li>
+          <li>豚こま切れ</li>
           <li></li>
         </ul>
       </div>
