@@ -52,13 +52,17 @@
   
 /*vegetablesにis-activeというクラスがついた時の形状*/
 .vegetables.is-active {
+  display: block;
+  animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.grid {
   display: grid;/*表示*/
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 50px 50px 50px;
   gap: 50px;
-  animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
 }
   
 @keyframes displayAnime{

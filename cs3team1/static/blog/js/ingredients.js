@@ -31,4 +31,4 @@ $(window).on('load',function () {
   $('.vegetables:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
   let hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
   GethashID (hashName);//設定したタブの読み込み
-}); 
+});
