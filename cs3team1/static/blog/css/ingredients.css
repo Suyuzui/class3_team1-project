@@ -3,13 +3,26 @@
     justify-content: center;
     flex-flow: row;
     width: 100%;
-    height: 50px;
+    height: 70px;
     top: 0;
     left: 0;
     position: fixed;
     background-color: #A2CA0E;
     color: #000000;
     padding: 1em;
+}
+
+div.header a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: bold;
+}
+
+div.header a:hover {
+  color: #FFE600;
 }
 
 .margin {
@@ -22,40 +35,89 @@
 }
 
 .categories {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 1em;
-    flex-direction:row;
-    justify-content: center;
-    margin-right: 5em;
+  display: inline-block;
+  padding-left: 1em;
+  margin-right: 5em;
+  margin-top: -1em;
+  z-index: 0;
+  position: relative;
+}
+
+.categories input {
+  display: none;
+}
+
+#vegetables:checked~#vegetables2 {
+  display: block;
+  text-align: center;
+  animation-name: displayAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#meats:checked~#meats2 {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#fish:checked~#fish2 {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#fruits:checked~#fruits2 {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#tastes:checked~#tastes2 {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#others:checked~#others2 {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 /*エリアの表示非表示と形状*/
 .vegetables {
-    display: none;/*はじめは非表示*/
-    opacity: 0;/*透過0*/
-    background: #ffffff;
-    padding:50px 20px;
+  display: none;/*はじめは非表示*/
+  text-align: center;
+  border: 1px solid black;   /* 枠線を引く：黒色で1ピクセルの実線 */
+  padding: 1em;              /* 内側の余白量 */
+  background-color: #fefefe;
 } 
 
 /*tabの形状*/
-.categories li a{
-    display: block;
-    background:#dddddd;
-    margin:0 2px;
-    padding:10px 20px;
+.tab{
+  display: inline-block;          /* インラインブロック化 */
+  border-width: 1px 1px 0px 1px;  /* 上側と左右に枠線を引く */
+  border-style: solid;            /* 枠線の種類は「実線」 */
+  border-color: #000000;            /* 枠線の色は「黒」 */
+  border-radius: 0.75em 0.75em 0px 0px;  /* 左上と右上の角だけを丸くする */
+  padding: 0.75em 1em;            /* 内側の余白量 */
+  font-weight: bold;              /* タブの文字を太字にする */
+  color: #FFE600;
+  background-color: #F08A37;      
 }
-/*liにactiveクラスがついた時の形状*/
-.categories li.active a{
-    background:#ffffff;
+
+.tab:hover {
+  color: #F08A37;
+  background-color: #A2CA0E;
+  cursor: pointer;             /* マウスポインタの形状を「指(指し示す形)」にする */
 }
-  
-/*vegetablesにis-activeというクラスがついた時の形状*/
-.vegetables.is-active {
-  display: block;
-  animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+
+input:checked + .tab {
+  color: #F08A37;
+  background-color: #A2CA0E;
+  z-index: 15;
+  position: relative;
 }
 
 .grid {
@@ -78,16 +140,11 @@
 /*========= レイアウトのためのCSS ===============*/
   
 body{
-  background:#eeeeee;
-}
-
-ul{
-  list-style:none;
-}
-
-a{
-  color:#333333;
-  text-decoration: none;
+  background-image: url("/static/blog/img/back1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-flow: column;
 }
 
 .wrapper{

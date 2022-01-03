@@ -1,6 +1,6 @@
 
 h1{
-    color: rgb(255, 0, 0);
+    color: #F08A37;
 }
 
 nav{
@@ -47,7 +47,7 @@ li.menu1 a{
 }
 
 ul.menu li.menu a:hover{
-    color: #E71B1F;
+    color: #FEE600;
 }
     
 
@@ -123,5 +123,5 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: orange;
+    color: #F08A37;
 }

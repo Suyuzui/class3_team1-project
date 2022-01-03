@@ -4,10 +4,7 @@
   <head>    
     <title>食材選び</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/ingredients.css' %}">
-    <script src="{% static 'blog/js/jQueryPost.js' %}" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="{% static 'blog/js/ingredients.js' %}"></script>
   </head>
   <body>
     <div class="header">
@@ -25,124 +22,125 @@
     <br>
     <br>
     <br>
+    <br>
     <h2 class="center">食材を1つ選んで下さい</h2>
     <div class="wrapper">
-      <ul class="categories">
-        <li><a href="#vegetables">野菜</a></li>
-        <li><a href="#meats">肉</a></li>
-        <li><a href="#fish">魚</a></li>
-        <li><a href="#fruits">果物</a></li>
-        <li><a href="#tastes">調味料</a></li>
-        <li><a href="#others">その他</a></li>
-      </ul>
+      <div class="categories">
+        <input type="radio" name="tabset" id="vegetables" checked><label for="vegetables" class="tab">野菜</label> 
+        <input type="radio" name="tabset" id="meats" checked><label for="meats" class="tab">肉</label>
+        <input type="radio" name="tabset" id="fish" checked><label for="fish" class="tab">魚</label>
+        <input type="radio" name="tabset" id="fruits" checked><label for="fruits" class="tab">果物</label>
+        <input type="radio" name="tabset" id="tastes" checked><label for="tastes" class="tab">調味料</label>
+        <input type="radio" name="tabset" id="others" checked><label for="others" class="tab">その他</label>
 
-      <div id="vegetables" class="vegetables">
-        <h2 class="center">野菜</h2>
-        <br>
-        <ul class="grid">
-          <li><img src="{%static 'blog/img/vegetables/ninjin_carrot.png' %}" width="50" height="50"><br>にんじん</li>
-          <li><img src="{%static 'blog/img/vegetables/nasu_eggplant.png' %}" width="50" height="50"><br>なす</li>
-          <li><img src="{%static 'blog/img/vegetables/jagaimo_poteto.png' %}" width="50" height="50"><br>じゃがいも</li>
-          <li><img src="{%static 'blog/img/vegetables/daikon_radish.png' %}" width="50" height="50"><br>大根</li>
-          <li><img src="{%static 'blog/img/vegetables/tamanegi_onion.png' %}" width="50" height="50"><br>玉ねぎ</li>
-          <li><img src="{%static 'blog/img/vegetables/kyuuri_cucumber.png' %}" width="50" height="50"><br>きゅうり</li>
-          <li><img src="{%static 'blog/img/vegetables/tomato_red.png' %}" width="50" height="50"><br>トマト</li>
-          <li><img src="{%static 'blog/img/vegetables/piman_greenpepper.png' %}" width="50" height="50"><br>ピーマン</li>
-          <li><img src="{%static 'blog/img/vegetables/paprika.png' %}" width="50" height="50"><br>パプリカ</li>
-          <li><img src="{%static 'blog/img/vegetables/negi_green_onion.png' %}" width="50" height="50"><br>長ネギ</li>
-          <li><img src="{%static 'blog/img/vegetables/satsumaimo_sweetpotato.png' %}" width="50" height="50"><br>サツマイモ</li>
-          <li><img src="{%static 'blog/img/vegetables/vegetable_komatsuna.png' %}" width="50" height="50"><br>小松菜</li>
-          <li><img src="{%static 'blog/img/vegetables/hakusai.png' %}" width="50" height="50"><br>白菜</li>
-          <li><img src="{%static 'blog/img/vegetables/vegetable_cabbage2.png' %}" width="50" height="50"><br>キャベツ</li>
-          <li><img src="{%static 'blog/img/vegetables/hourensou_spinach.png' %}" width="50" height="50"><br>ほうれん草</li>
-          <li><img src="{%static 'blog/img/vegetables/broccoli.png' %}" width="50" height="50"><br>ブロッコリー</li>
-          <li><img src="{%static 'blog/img/vegetables/asparagus.png' %}" width="50" height="50"><br>アスパラガス</li>
-          <li><img src="{%static 'blog/img/vegetables/kabocha.png' %}" width="50" height="50"><br>かぼちゃ</li>
-          <li><img src="{%static 'blog/img/vegetables/okura_gombo.png' %}" width="50" height="50"><br>オクラ</li>
-        </ul> 
-      </div>
-      <div id="meats" class="vegetables">
-        <h2 class="center">肉</h2>
-        <br>
-        <ul class="grid">
-          <li><img src="{% static 'blog/img/meats/niku_butabara_block.png' %}" width="50" height="50"><br>豚バラ(ブロック)</li>
-          <li><img src="{% static 'blog/img/meats/food_niku_buta_ro-su.png' %}" width="50" height="50"><br>豚ロース</li>
-          <li><img src="{% static 'blog/img/meats/food_niku_pack_komagire.png' %}" width="50" height="50"><br>豚こま切れ</li>
-          <li><img src="{% static 'blog/img/meats/niku_gyu_rosu.png' %}" width="50" height="50"><br>牛ロース</li>
-          <li><img src="{% static 'blog/img/meats/food_hikiniku_beef.png' %}" width="50" height="50"><br>牛ひき肉</li>
-          <li><img src="{% static 'blog/img/meats/niku_tori_momo.png' %}" width="50" height="50"><br>鶏もも</li>
-          <li></li>
-        </ul>
-      </div>
-      <div id="fish" class="vegetables">
-        <h2 class="center">魚</h2>
-        <br>
-        <br>
-        <ul class="grid">
-          <li><img src="{% static 'blog/img/fish/fish_sakana_sanma.png' %}" width="70" height="70"><br>サンマ</li>
-          <li><img src="{% static 'blog/img/fish/fish_aji2.png' %}" width="70" height="70"><br>アジ</li>
-          <li><img src="{% static 'blog/img/fish/fish_buri2.png' %}" width="70" height="70"><br>ブリ</li>
-          <li><img src="{% static 'blog/img/fish/fish_saba2.png' %}" width="70" height="70"><br>サバ</li>
-          <li><img src="{% static 'blog/img/fish/fish_ayu2.png' %}" width="70" height="70"><br>アユ</li>
-          <li><img src="{% static 'blog/img/fish/fish_sakana_iwashi.png' %}" width="70" height="70"><br>イワシ</li>
-          <li><img src="{% static 'blog/img/fish/fish_sawara2.png' %}" width="70" height="70"><br>サワラ</li>
-          <li><img src="{% static 'blog/img/fish/fish_sakana_sake.png' %}" width="70" height="70"><br>サケ</li>
-          <li><img src="{% static 'blog/img/fish/fish_kisu2.png' %}" width="70" height="70"><br>キス</li>
-          <li><img src="{% static 'blog/img/fish/fish_unagi2.png' %}" width="70" height="70"><br>ウナギ</li>
-          <li><img src="{% static 'blog/img/fish/food_hotate_kaibashira.png' %}" width="70" height="70"><br>ホタテ</li>
-          <li><img src="{% static 'blog/img/fish/fish_tako_oyogu.png' %}" width="70" height="70"><br>タコ</li>
-          <li><img src="{% static 'blog/img/fish/fish_sakana_yariika_syokuwan.png' %}" width="70" height="70"><br>イカ</li>
-          <li><img src="{% static 'blog/img/fish/ebi_aka.png' %}" width="70" height="70"><br>エビ</li>
-        </ul>
-      </div>
-      <div id="fruits" class="vegetables">
-        <h2 class="center">果物</h2>
-        <br>
-        <ul class="grid">
-          <li><img src="{% static 'blog/img/fruits/fruit_banana.png' %}" width="50" height="50"><br>バナナ</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_cherry.png' %}" width="50" height="50"><br>さくらんぼ</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_melon.png' %}" width="50" height="60"><br>メロン</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_suika_kodama.png' %}" width="50" height="50"><br>スイカ</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_pineapple.png' %}" width="50" height="70"><br>パイナップル</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_younashi.png' %}" width="50" height="70"><br>洋梨</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_kiwi_green.png' %}" width="50" height="50"><br>キウイ</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_momo.png' %}" width="50" height="50"><br>モモ</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_orange.png' %}" width="50" height="50"><br>みかん</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_grape.png' %}" width="50" height="70"><br>ブドウ</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_ringo.png' %}" width="50" height="50"><br>りんご</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_kaki.png' %}" width="50" height="50"><br>柿</li>
-          <li><img src="{% static 'blog/img/fruits/fruit_nashi.png' %}" width="50" height="50"><br>梨</li>
-          <li></li>
-        </ul>
-      </div>
-      <div id="tastes" class="vegetables">
-        <h2 class="center">調味料</h2>
-        <br>
-        <ul class="grid">
-          <li><img src="{% static 'blog/img/tastes/sugar.png' %}" width="50" height="50"><br>砂糖</li>
-          <li><img src="{% static 'blog/img/tastes/salt.png' %}" width="50" height="70"><br>塩</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_osu2.png' %}" width="50" height="70"><br>酢</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_syouyu_bottle.png' %}" width="50" height="70"><br>醤油</li>
-          <li><img src="{% static 'blog/img/tastes/miso_awase.png' %}" width="50" height="50"><br>味噌</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_mirin.png' %}" width="50" height="70"><br>みりん</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_tomato_ketchup.png' %}" width="50" height="70"><br>ケチャップ</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_shirodashi.png' %}" width="50" height="70"><br>白だし</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_oyster_sauce.png' %}" width="50" height="70"><br>オイスターソース</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_toubanjan.png' %}" width="50" height="70"><br>豆板醬</li>
-          <li><img src="{% static 'blog/img/tastes/cooking_lemon.png' %}" width="50" height="70"><br>レモン汁</li>
-        </ul>
-      </div>
-      <div id="others" class="vegetables">
-        <h2 class="center">その他</h2>
-        <br>
-        <ul class="grid">
-          <li><img src="{% static 'blog/img/others/kinoko_shimeji.png' %}" width="50" height="50"><br>しめじ</li>
-          <li><img src="{% static 'blog/img/others/kinoko_enoki.png' %}" width="50" height="50"><br>エノキ</li>
-          <li><img src="{% static 'blog/img/others/kinoko_eringi.png' %}" width="50" height="50"><br>エリンギ</li>
-          <li><img src="{% static 'blog/img/others/food_tofu_momen.png' %}" width="50" height="50"><br>木綿豆腐</li>
-          <li><img src="{% static 'blog/img/others/food_tofu_kinu.png' %}" width="50" height="50"><br>絹豆腐</li>
-          <li><img src="{% static 'blog/img/others/takenoko_bamboo_shoot.png' %}" width="50" height="50"><br>タケノコ</li>
-        </ul>
+        <div id="vegetables2" class="vegetables">
+          <h2 class="center">野菜</h2>
+          <br>
+          <ul class="grid">
+            <li><img src="{%static 'blog/img/vegetables/ninjin_carrot.png' %}" width="50" height="50"><br>にんじん</li>
+            <li><img src="{%static 'blog/img/vegetables/nasu_eggplant.png' %}" width="50" height="50"><br>なす</li>
+            <li><img src="{%static 'blog/img/vegetables/jagaimo_poteto.png' %}" width="50" height="50"><br>じゃがいも</li>
+            <li><img src="{%static 'blog/img/vegetables/daikon_radish.png' %}" width="50" height="50"><br>大根</li>
+            <li><img src="{%static 'blog/img/vegetables/tamanegi_onion.png' %}" width="50" height="50"><br>玉ねぎ</li>
+            <li><img src="{%static 'blog/img/vegetables/kyuuri_cucumber.png' %}" width="50" height="50"><br>きゅうり</li>
+            <li><img src="{%static 'blog/img/vegetables/tomato_red.png' %}" width="50" height="50"><br>トマト</li>
+            <li><img src="{%static 'blog/img/vegetables/piman_greenpepper.png' %}" width="50" height="50"><br>ピーマン</li>
+            <li><img src="{%static 'blog/img/vegetables/paprika.png' %}" width="50" height="50"><br>パプリカ</li>
+            <li><img src="{%static 'blog/img/vegetables/negi_green_onion.png' %}" width="50" height="50"><br>長ネギ</li>
+            <li><img src="{%static 'blog/img/vegetables/satsumaimo_sweetpotato.png' %}" width="50" height="50"><br>サツマイモ</li>
+            <li><img src="{%static 'blog/img/vegetables/vegetable_komatsuna.png' %}" width="50" height="50"><br>小松菜</li>
+            <li><img src="{%static 'blog/img/vegetables/hakusai.png' %}" width="50" height="50"><br>白菜</li>
+            <li><img src="{%static 'blog/img/vegetables/vegetable_cabbage2.png' %}" width="50" height="50"><br>キャベツ</li>
+            <li><img src="{%static 'blog/img/vegetables/hourensou_spinach.png' %}" width="50" height="50"><br>ほうれん草</li>
+            <li><img src="{%static 'blog/img/vegetables/broccoli.png' %}" width="50" height="50"><br>ブロッコリー</li>
+            <li><img src="{%static 'blog/img/vegetables/asparagus.png' %}" width="50" height="50"><br>アスパラガス</li>
+            <li><img src="{%static 'blog/img/vegetables/kabocha.png' %}" width="50" height="50"><br>かぼちゃ</li>
+            <li><img src="{%static 'blog/img/vegetables/okura_gombo.png' %}" width="50" height="50"><br>オクラ</li>
+          </ul>
+        </div>
+        <div id="meats2" class="vegetables">
+          <h2 class="center">肉</h2>
+          <br>
+          <ul class="grid">
+            <li><img src="{% static 'blog/img/meats/niku_butabara_block.png' %}" width="50" height="50"><br>豚バラ(ブロック)</li>
+            <li><img src="{% static 'blog/img/meats/food_niku_buta_ro-su.png' %}" width="50" height="50"><br>豚ロース</li>
+            <li><img src="{% static 'blog/img/meats/food_niku_pack_komagire.png' %}" width="50" height="50"><br>豚こま切れ</li>
+            <li><img src="{% static 'blog/img/meats/niku_gyu_rosu.png' %}" width="50" height="50"><br>牛ロース</li>
+            <li><img src="{% static 'blog/img/meats/food_hikiniku_beef.png' %}" width="50" height="50"><br>牛ひき肉</li>
+            <li><img src="{% static 'blog/img/meats/niku_tori_momo.png' %}" width="50" height="50"><br>鶏もも</li>
+            <li></li>
+          </ul>
+        </div>
+        <div id="fish2" class="vegetables">
+          <h2 class="center">魚</h2>
+          <br>
+          <br>
+          <ul class="grid">
+            <li><img src="{% static 'blog/img/fish/fish_sakana_sanma.png' %}" width="70" height="70"><br>サンマ</li>
+            <li><img src="{% static 'blog/img/fish/fish_aji2.png' %}" width="70" height="70"><br>アジ</li>
+            <li><img src="{% static 'blog/img/fish/fish_buri2.png' %}" width="70" height="70"><br>ブリ</li>
+            <li><img src="{% static 'blog/img/fish/fish_saba2.png' %}" width="70" height="70"><br>サバ</li>
+            <li><img src="{% static 'blog/img/fish/fish_ayu2.png' %}" width="70" height="70"><br>アユ</li>
+            <li><img src="{% static 'blog/img/fish/fish_sakana_iwashi.png' %}" width="70" height="70"><br>イワシ</li>
+            <li><img src="{% static 'blog/img/fish/fish_sawara2.png' %}" width="70" height="70"><br>サワラ</li>
+            <li><img src="{% static 'blog/img/fish/fish_sakana_sake.png' %}" width="70" height="70"><br>サケ</li>
+            <li><img src="{% static 'blog/img/fish/fish_kisu2.png' %}" width="70" height="70"><br>キス</li>
+            <li><img src="{% static 'blog/img/fish/fish_unagi2.png' %}" width="70" height="70"><br>ウナギ</li>
+            <li><img src="{% static 'blog/img/fish/food_hotate_kaibashira.png' %}" width="70" height="70"><br>ホタテ</li>
+            <li><img src="{% static 'blog/img/fish/fish_tako_oyogu.png' %}" width="70" height="70"><br>タコ</li>
+            <li><img src="{% static 'blog/img/fish/fish_sakana_yariika_syokuwan.png' %}" width="70" height="70"><br>イカ</li>
+            <li><img src="{% static 'blog/img/fish/ebi_aka.png' %}" width="70" height="70"><br>エビ</li>
+          </ul>
+        </div>
+        <div id="fruits2" class="vegetables">
+          <h2 class="center">果物</h2>
+          <br>
+          <ul class="grid">
+            <li><img src="{% static 'blog/img/fruits/fruit_banana.png' %}" width="50" height="50"><br>バナナ</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_cherry.png' %}" width="50" height="50"><br>さくらんぼ</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_melon.png' %}" width="50" height="60"><br>メロン</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_suika_kodama.png' %}" width="50" height="50"><br>スイカ</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_pineapple.png' %}" width="50" height="70"><br>パイナップル</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_younashi.png' %}" width="50" height="70"><br>洋梨</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_kiwi_green.png' %}" width="50" height="50"><br>キウイ</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_momo.png' %}" width="50" height="50"><br>モモ</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_orange.png' %}" width="50" height="50"><br>みかん</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_grape.png' %}" width="50" height="70"><br>ブドウ</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_ringo.png' %}" width="50" height="50"><br>りんご</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_kaki.png' %}" width="50" height="50"><br>柿</li>
+            <li><img src="{% static 'blog/img/fruits/fruit_nashi.png' %}" width="50" height="50"><br>梨</li>
+            <li></li>
+          </ul>
+        </div>
+        <div id="tastes2" class="vegetables">
+          <h2 class="center">調味料</h2>
+          <br>
+          <ul class="grid">
+            <li><img src="{% static 'blog/img/tastes/sugar.png' %}" width="50" height="50"><br>砂糖</li>
+            <li><img src="{% static 'blog/img/tastes/salt.png' %}" width="50" height="70"><br>塩</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_osu2.png' %}" width="50" height="70"><br>酢</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_syouyu_bottle.png' %}" width="50" height="70"><br>醤油</li>
+            <li><img src="{% static 'blog/img/tastes/miso_awase.png' %}" width="50" height="50"><br>味噌</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_mirin.png' %}" width="50" height="70"><br>みりん</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_tomato_ketchup.png' %}" width="50" height="70"><br>ケチャップ</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_shirodashi.png' %}" width="50" height="70"><br>白だし</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_oyster_sauce.png' %}" width="50" height="70"><br>オイスターソース</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_toubanjan.png' %}" width="50" height="70"><br>豆板醬</li>
+            <li><img src="{% static 'blog/img/tastes/cooking_lemon.png' %}" width="50" height="70"><br>レモン汁</li>
+          </ul>
+        </div>
+        <div id="others2" class="vegetables">
+          <h2 class="center">その他</h2>
+          <br>
+          <ul class="grid">
+            <li><img src="{% static 'blog/img/others/kinoko_shimeji.png' %}" width="50" height="50"><br>しめじ</li>
+            <li><img src="{% static 'blog/img/others/kinoko_enoki.png' %}" width="50" height="50"><br>エノキ</li>
+            <li><img src="{% static 'blog/img/others/kinoko_eringi.png' %}" width="50" height="50"><br>エリンギ</li>
+            <li><img src="{% static 'blog/img/others/food_tofu_momen.png' %}" width="50" height="50"><br>木綿豆腐</li>
+            <li><img src="{% static 'blog/img/others/food_tofu_kinu.png' %}" width="50" height="50"><br>絹豆腐</li>
+            <li><img src="{% static 'blog/img/others/takenoko_bamboo_shoot.png' %}" width="50" height="50"><br>タケノコ</li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
