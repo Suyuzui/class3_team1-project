@@ -17,18 +17,18 @@ function GethashID (hashIDName){
 }
   
 
-  //タブをクリックしたら
-  $('.categories a').click(function() {
-    let idOfName = $(this).attr('href'); //タブ内のリンク名を取得  
-    GethashID (idOfName);//設定したタブの読み込みと
-    return false;//aタグを無効にする
-  });
+//タブをクリックしたら
+$('.categories a').click(function() {
+  let idOfName = $(this).attr('href'); //タブ内のリンク名を取得  
+  GethashID (idOfName);//設定したタブの読み込みと
+  return false;//aタグを無効にする
+});
   
   
-  // 上記の動きをページが読み込まれたらすぐに動かす
-  $(window).on('load',function () {
-    $('.categories li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
-    $('.vegetables:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
-    let hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
-    GethashID (hashName);//設定したタブの読み込み
-  });
+// 上記の動きをページが読み込まれたらすぐに動かす
+$(window).on('load',function () {
+  $('.categories li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
+  $('.vegetables:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
+  let hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+  GethashID (hashName);//設定したタブの読み込み
+}); 

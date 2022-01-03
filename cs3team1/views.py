@@ -14,6 +14,9 @@ from operator import and_
 def ingredient(request):
 	return render(request, 'cs3team1/ingredients.html')
 
+#def jQueryPost(request):
+	return redirect('https://code.jquery.com/jquery-3.4.1.min.js')
+
 def recommendation(request):
 	context = {
 		"recipes": [
