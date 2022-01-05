@@ -39,8 +39,9 @@ div.header a:hover {
 
 .categories {
   display: inline-block;
-  padding-left: 1em;
-  margin-right: 5em;
+  margin: 50 auto;
+  padding: auto;
+  width: 80%;
   margin-top: -1em;
   z-index: 0;
   position: relative;
@@ -107,7 +108,7 @@ div.header a:hover {
   padding: 0.75em 1em;            /* 内側の余白量 */
   font-weight: bold;              /* タブの文字を太字にする */
   color: #FFE600;
-  background-color: #F08A37;      
+  background-color: #F08A37; 
 }
 
 .tab:hover {
