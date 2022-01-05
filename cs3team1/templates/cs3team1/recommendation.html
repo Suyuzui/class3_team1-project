@@ -6,6 +6,18 @@
     <meta charset="UTF-8"></head>
     <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
   <body>
+    <div class="header">
+      <p class="margin"><a href="{% url 'home' %}">HOME</a></p>
+      <p class="margin"><a href="{% url 'ingredient' %}">食材</a></p>
+      <p class="margin"><a href="{% url 'home' %}">履歴</a></p>
+      {% if user.is_authenticated %}
+      <p class="margin"><a href="{% url 'post_new' %}">献立表の投稿</a></p>
+      <p class="margin"><a href="{% url 'account_logout' %}">ログアウト</a></p>
+      {% else %}
+      <p class="margin"><a href="{% url 'account_signup' %}">サインアップ</a></p>
+      <p class="margin"><a href="{% url 'account_login' %}">ログイン</a></p>
+      {% endif %}
+    </div>
     <h1 >Recommendation</h1>
     <a href=""><img src="{% static 'blog/img/iniad.png' %}"><!--open data--><p class="recipe">レシピ1</p></a>
     <a href=""><img src="{% static 'blog/img/iniad.png' %}"><p class="recipe">レシピ2</p></a>
