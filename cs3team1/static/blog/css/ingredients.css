@@ -130,7 +130,11 @@ input:checked + .tab {
   grid-template-rows: 50px 50px 50px;
   gap: 50px;
 }
-  
+
+ul.grid {
+  list-style: none;
+}
+
 @keyframes displayAnime{
   from {
     opacity: 0;
