@@ -5,6 +5,7 @@
     <title>Recipe</title>
     <meta charset="UTF-8"></head>
     <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/recommendation.css' %}">
   <body>
     <div class="header">
       <p class="margin"><a href="{% url 'home' %}">HOME</a></p>
@@ -18,6 +19,12 @@
       <p class="margin"><a href="{% url 'account_login' %}">ログイン</a></p>
       {% endif %}
     </div>
-    <h1 >レシピ <!-- django --></h1>
+    <div class="main">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 >レシピ <!-- django --></h1>
+      </div>
   </body>
 </html>

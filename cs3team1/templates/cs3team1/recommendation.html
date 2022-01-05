@@ -5,6 +5,7 @@
     <title>Recommendation</title>
     <meta charset="UTF-8"></head>
     <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/recommendation.css' %}">
   <body>
     <div class="header">
       <p class="margin"><a href="{% url 'home' %}">HOME</a></p>
@@ -18,11 +19,20 @@
       <p class="margin"><a href="{% url 'account_login' %}">ログイン</a></p>
       {% endif %}
     </div>
-    <h1 >Recommendation</h1>
-    <a href=""><img src="{% static 'blog/img/iniad.png' %}"><!--open data--><p class="recipe">レシピ1</p></a>
-    <a href=""><img src="{% static 'blog/img/iniad.png' %}"><p class="recipe">レシピ2</p></a>
-    <a href=""><img src="{% static 'blog/img/iniad.png' %}"><p class="recipe">レシピ3</p></a>
-    <a href=""><img src="{% static 'blog/img/iniad.png' %}"><p class="recipe">レシピ4</p></a>
-    <a href=""><img src="{% static 'blog/img/iniad.png' %}"><p class="recipe">レシピ5</p></a>
+
+    <div class="main">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 >おすすめレシピ一覧</h1>
+      <div class="recipe">
+      <a href="{% url 'recipe' %}"><img  src="{% static 'blog/img/iniad.png' %}"><!--open data--><p>レシピ1</p></a>
+      <a href=""><img  src="{% static 'blog/img/iniad.png' %}"><p>レシピ2</p></a>
+      <a href=""><img  src="{% static 'blog/img/iniad.png' %}"><p>レシピ3</p></a>
+      <a href=""><img  src="{% static 'blog/img/iniad.png' %}"><p>レシピ4</p></a>
+      <a href=""><img  src="{% static 'blog/img/iniad.png' %}"><p>レシピ5</p></a>
+    </div>
+    </div>
   </body>
 </html>
