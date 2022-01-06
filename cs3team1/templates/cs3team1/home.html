@@ -53,12 +53,14 @@
       <br>
       <h1 >Home</h1>
       <br>
-      <div class="slider">
-        <img src="gazou1.jpg" width="500" height="300" alt="">
-        <img src="gazou2.jpg" width="500" height="300" alt="">
-        <img src="gazou3.jpg" width="500" height="300" alt="">
-        <img src="gazou4.jpg" width="500" height="300" alt="">
-      </div>
+      
+      <ul class="slider">
+        <li><img src="{%static 'blog/img/sample1.png' %}" alt=""></li>
+        <li><img src="{%static 'blog/img/sample2.png' %}" alt=""></li>
+        <li><img src="{%static 'blog/img/sample3.png' %}" alt=""></li>
+        <li><img src="{%static 'blog/img/sample4.png' %}" alt=""></li>
+      </ul>
+      
       <p>サンプル</p>
       <p>サンプル</p>
       <p>サンプル</p>
@@ -72,12 +74,13 @@
       <p>サンプル</p>
       <p>サンプル</p>
       <p>サンプル</p>
+
+      {% block content %}
+
+      {% endblock %}
+      {% block extra_js %}
+      {% endblock %}
 
     </div>
-    {% block content %}
-
-    {% endblock %}
-    {% block extra_js %}
-    {% endblock %}
   </body>
 </html>
