@@ -100,13 +100,13 @@ div.header a:hover {
 
 /*tabの形状*/
 .tab{
-  display: inline-block;          /* インラインブロック化 */
+  display: inline-block;
   border-width: 1px 1px 0px 1px;  /* 上側と左右に枠線を引く */
-  border-style: solid;            /* 枠線の種類は「実線」 */
-  border-color: #000000;            /* 枠線の色は「黒」 */
+  border-style: solid;
+  border-color: #000000;
   border-radius: 0.75em 0.75em 0px 0px;  /* 左上と右上の角だけを丸くする */
   padding: 0.75em 1em;            /* 内側の余白量 */
-  font-weight: bold;              /* タブの文字を太字にする */
+  font-weight: bold;
   color: #FFE600;
   background-color: #F08A37; 
 }
