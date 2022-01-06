@@ -7,24 +7,61 @@
     <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/recommendation.css' %}">
   <body>
-    <div class="header">
-      <p class="margin"><a href="{% url 'home' %}">HOME</a></p>
-      <p class="margin"><a href="{% url 'ingredient' %}">食材</a></p>
-      <p class="margin"><a href="{% url 'home' %}">履歴</a></p>
-      {% if user.is_authenticated %}
-      <p class="margin"><a href="{% url 'post_new' %}">献立表の投稿</a></p>
-      <p class="margin"><a href="{% url 'account_logout' %}">ログアウト</a></p>
-      {% else %}
-      <p class="margin"><a href="{% url 'account_signup' %}">サインアップ</a></p>
-      <p class="margin"><a href="{% url 'account_login' %}">ログイン</a></p>
-      {% endif %}
-    </div>
+
+    <nav>
+      <ul class="menu">
+        <li class="menu"><a href="{% url 'home' %}">HOME</a></li>
+        <li class="menu"><a href="{% url 'ingredient' %}">食材</a></li>
+
+        <li class="menu"><a href="{% url 'home' %}">履歴</a></li>
+        {% if user.is_authenticated %}
+          <li class="menu">
+            <a href="{% url 'post_new'  %}">レシピの投稿</a>
+          </li>
+          <li class="menu">
+            <a href="{% url 'account_logout' %}">ログアウト</a>
+          </li>
+        {% else %}
+          <li class="menu">
+            <a href="{% url 'account_signup' %}">サインアップ</a>
+          </li>
+          <li class="menu">
+            <a href="{% url 'account_login' %}">ログイン</a>
+          </li>
+        {% endif %}
+      </ul>
+
+    </nav>
+
     <div class="main">
       <br>
       <br>
       <br>
       <br>
       <h1 >レシピ <!-- django --></h1>
-      </div>
+      <div class="text">
+      <h2 class="text">材料</h2>
+      <ul>玉ねぎ</ul>
+      <ul>卵</ul>
+      <ul></ul>
+      <ul></ul>
+      <ul></ul>
+    </div>
+      <div class="text">
+      <h2 class="text">作り方</h2>
+      <h6></h6> 
+    </div>
+      <div class="text">
+      <h2 class="text">ポイント</h2>
+      <h6></h6>
+    </div>
+      <div class="text">
+      <h2 class="text">メモ</h2>
+      <h6></h6>
+    </div>
+    <br>
+    <br>
+
+    </div>
   </body>
 </html>
