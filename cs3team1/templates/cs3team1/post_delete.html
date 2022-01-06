@@ -1,6 +1,8 @@
 {% extends "cs3team1/home.html" %}
 
 {% block content %}
+
+<div class="text">
 <h2 class="my-4">{{ post_data.title }}</h2>
 <hr>
 <h5 class="my-4">削除してもよろしいですか？</h5> 
@@ -8,5 +10,6 @@
     {% csrf_token %}
     <button class="btn btn-warning" type="submit">削除する</button>
 </form>
+</div>
 
 {% endblock %}

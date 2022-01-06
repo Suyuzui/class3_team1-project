@@ -210,7 +210,7 @@ h2.text{
     padding: 1rem 2rem calc(1rem + 10px);
   }
   
-  h2.text:before {
+h2.text:before {
     position: absolute;
     top: -7px;
     left: -7px;
@@ -219,3 +219,31 @@ h2.text{
     content: '';
     border: 4px solid rgb(0, 0, 0);
   }
+
+/*レシピタイトル＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+h2.r {
+    position: relative;
+    display: inline-block;
+    padding: 0 65px;
+    text-align: center;
+}
+  
+h2.r:before,
+h2.r:after {
+    position: absolute;
+    top: calc(50% - 3px);
+    width: 50px;
+    height: 6px;
+    content: '';
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+}
+  
+h2.r:before {
+    left: 0;
+}
+  
+h2.r:after {
+    right: 0
+}

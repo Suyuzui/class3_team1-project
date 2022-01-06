@@ -2,6 +2,8 @@
 {% load widget_tweaks %}
 {% block content %}
 
+<div class="text">
+
 <h2 class="my-4">{{ post_data.title }}</h2>
 <p>{{ post_data.category }}</p>
 <hr>
@@ -19,4 +21,7 @@
         <a href="{% url 'post_delete' post_data.id %}" class="btn btn-danger">削除する</a>    
     </div>
 {% endif %}
+
+</div>
+
 {% endblock %}
