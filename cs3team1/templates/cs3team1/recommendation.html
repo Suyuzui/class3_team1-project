@@ -7,18 +7,31 @@
     <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/recommendation.css' %}">
   <body>
-    <div class="header">
-      <p class="margin"><a href="{% url 'home' %}">HOME</a></p>
-      <p class="margin"><a href="{% url 'ingredient' %}">食材</a></p>
-      <p class="margin"><a href="{% url 'home' %}">履歴</a></p>
-      {% if user.is_authenticated %}
-      <p class="margin"><a href="{% url 'post_new' %}">献立表の投稿</a></p>
-      <p class="margin"><a href="{% url 'account_logout' %}">ログアウト</a></p>
-      {% else %}
-      <p class="margin"><a href="{% url 'account_signup' %}">サインアップ</a></p>
-      <p class="margin"><a href="{% url 'account_login' %}">ログイン</a></p>
-      {% endif %}
-    </div>
+
+    <nav>
+      <ul class="menu">
+        <li class="menu"><a href="{% url 'home' %}">HOME</a></li>
+        <li class="menu"><a href="{% url 'ingredient' %}">食材</a></li>
+
+        <li class="menu"><a href="{% url 'home' %}">履歴</a></li>
+        {% if user.is_authenticated %}
+          <li class="menu">
+            <a href="{% url 'post_new'  %}">レシピの投稿</a>
+          </li>
+          <li class="menu">
+            <a href="{% url 'account_logout' %}">ログアウト</a>
+          </li>
+        {% else %}
+          <li class="menu">
+            <a href="{% url 'account_signup' %}">サインアップ</a>
+          </li>
+          <li class="menu">
+            <a href="{% url 'account_login' %}">ログイン</a>
+          </li>
+        {% endif %}
+      </ul>
+
+    </nav>
 
     <div class="main">
       <br>
@@ -33,6 +46,8 @@
       <a href=""><img  src="{% static 'blog/img/iniad.png' %}"><p>レシピ4</p></a>
       <a href=""><img  src="{% static 'blog/img/iniad.png' %}"><p>レシピ5</p></a>
     </div>
+    <br>
+    <br>
     </div>
   </body>
 </html>
