@@ -30,7 +30,7 @@
         <li class="menu"><a href="{% url 'home' %}">履歴</a></li>
         {% if user.is_authenticated %}
           <li class="menu">
-            <a href="{% url 'post_new' %}">献立表の投稿</a>
+            <a href="{% url 'post_new'  %}">レシピの投稿</a>
           </li>
           <li class="menu">
             <a href="{% url 'account_logout' %}">ログアウト</a>
@@ -44,7 +44,6 @@
           </li>
         {% endif %}
       </ul>
-      <hr size="10" noshade>
 
     </nav>
 
@@ -60,6 +59,11 @@
         <li><img src="{%static 'blog/img/slider/osusume1.png' %}" alt=""></li>
         <li><img src="{%static 'blog/img/slider/osusume1.png' %}" alt=""></li>
       </ul>
+
+      <div class="text">
+        <h2 class="text">概要</h2>
+        <h6>Homeでは毎日の献立や買い物リスト、レシピ、訪れたお店で食べたメニューなどを記録することが出来ます。ログインすることで、Homeに投稿が出来るようになります。メニューバーの「食材」をクリックし、食材を選ぶと、選んだ食材だけで作れるレシピを提案します。</h6>
+      </div>
       
       <p>サンプル</p>
       <p>サンプル</p>
