@@ -4,40 +4,18 @@
 {% block content %}
 
 
-<div class="row my-4">
-  <div class="col-md-8">
-    {% if keyword %}
-      <h4 class="mb-4">「{{ keyword }}の検索結果」</h4>
-    {% endif %}
-    {% for post in post_data %}
-      <div class="card mb-4">
-        {% if post.image %}
-          <img src="{{ post.image.url }}" alt="" class="card-image-top index-img">
-        {% endif %}
-        <div class="card-body">
-          <h2 cass="card-title">{{ post.title }}<span class="small"> - {{ post.category }}</span></h2>
-          <p cass="card-text">{{ post.content|truncatechars:100 }}</p>
-          <div class="btn btn-warning">詳細</div>
-        </div>
-        <div class="card-footer text-muted">
-          {{ post.created|date }} by {{ post.author }}
-        </div>
-        <a href="{% url 'post_detail' post.id %}" class="stretched-link"></a>
-      </div>
-    {% endfor %}
-  </div>
 
-  <div class="col-md-4">
-    <div class="card">
-      <h5 class="card-header">My recipe</h5>
-      <div class="card-body"> 
-        <p>このアプリについて</p>
-        <p class="mb-0">
-          Homeでは毎日の献立や買い物リスト、レシピ、訪れたお店で食べたメニューなどを記録することが出来ます。ログインすることで、Homeに投稿が出来るようになります。メニューバーの「食材」をクリックし、食材を選ぶと、選んだ食材だけで作れるレシピを提案します。
-        </p>
-      </div>
+
+  <div class="text">
+    <h2 class="text">検索</h2>
+    <div>
+      <form method="get" action="{% url 'search' %}" class="input-group">
+        <input type="text" class="form-control" name="keyword" placeholder="投稿を検索...">
+        <button class="btn btn-warning ml-2" type="submit">検索</button>
+      </form>
     </div>
 
+    <br>
     <div class="card my-4">
       <h5 class="card-header">カテゴリ</h5>
       <div class="card-body">
@@ -57,17 +35,30 @@
       </div>
     </div>
 
-    <div class="card my-4">
-      <h5 class="card-header">検索</h5>
-      <div class="card-body">
-        <form method="get" action="{% url 'search' %}" class="input-group">
-          <input type="text" class="form-control" name="keyword" placeholder="投稿を検索...">
-          <button class="btn btn-warning ml-2" type="submit">検索</button>
-        </form>
-      </div>
-    </div>
+    <br>
 
+    <div >
+      {% if keyword %}
+        <h4 class="mb-4">「{{ keyword }}の検索結果」</h4>
+      {% endif %}
+      {% for post in post_data %}
+        <div class="card mb-4">
+          {% if post.image %}
+            <img src="{{ post.image.url }}" alt="" class="card-image-top index-img">
+          {% endif %}
+          <div class="card-body">
+            <h2 cass="card-title">{{ post.title }}<span class="small"> - {{ post.category }}</span></h2>
+            <p cass="card-text">{{ post.content|truncatechars:100 }}</p>
+            <div class="btn btn-warning">詳細</div>
+          </div>
+          <div class="card-footer text-muted">
+            {{ post.created|date }} by {{ post.author }}
+          </div>
+          <a href="{% url 'post_detail' post.id %}" class="stretched-link"></a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-</div>
+
 
 {% endblock %}
