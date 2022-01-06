@@ -35,11 +35,13 @@ div.header a:hover {
 
 .center {
     text-align: center;
+    justify-content: center;
 }
 
 .categories {
   display: inline-block;
-  margin: 50 auto;
+  justify-content: center;
+  margin: 30px 10px 0px 80px;
   padding: auto;
   width: 80%;
   margin-top: -1em;
@@ -49,41 +51,53 @@ div.header a:hover {
 
 .categories input {
   display: none;
+  justify-content: center;
 }
 
 #vegetables:checked~#vegetables2 {
   display: block;
   text-align: center;
+  justify-content: center;
   animation-name: displayAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 #meats:checked~#meats2 {
   display: block;
+  text-align: center;
+  justify-content: center;
   animation-name: displayAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 #fish:checked~#fish2 {
   display: block;
+  text-align: center;
+  justify-content: center;
   animation-name: displayAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 #fruits:checked~#fruits2 {
   display: block;
+  text-align: center;
+  justify-content: center;
   animation-name: displayAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 #tastes:checked~#tastes2 {
   display: block;
+  text-align: center;
+  justify-content: center;
   animation-name: displayAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 #others:checked~#others2 {
   display: block;
+  text-align: center;
+  justify-content: center;
   animation-name: displayAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -93,6 +107,7 @@ div.header a:hover {
 .vegetables {
   display: none;/*はじめは非表示*/
   text-align: center;
+  justify-content: center;
   border: 1px solid black;   /* 枠線を引く：黒色で1ピクセルの実線 */
   padding: 1em;              /* 内側の余白量 */
   background-color: #fefefe;
@@ -101,6 +116,7 @@ div.header a:hover {
 /*tabの形状*/
 .tab{
   display: inline-block;
+  justify-content: center;
   border-width: 1px 1px 0px 1px;  /* 上側と左右に枠線を引く */
   border-style: solid;
   border-color: #000000;
@@ -151,7 +167,6 @@ body{
   background-image: url("/static/blog/img/back1.png");
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
   flex-flow: column;
 }
 
@@ -162,9 +177,5 @@ body{
   background:#fefefe;
 }
 
-.vegetables h3{
-  font-size:1.3rem;
-  margin:0 0 20px 10px;
-}
 
 /*------------------------------------------------*/
