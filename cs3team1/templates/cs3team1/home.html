@@ -27,7 +27,7 @@
         <li class="menu"><a href="{% url 'home' %}">HOME</a></li>
         <li class="menu"><a href="{% url 'ingredient' %}">食材</a></li>
 
-        <li class="menu"><a href="{% url 'home' %}">履歴</a></li>
+       
         {% if user.is_authenticated %}
           <li class="menu">
             <a href="{% url 'post_new'  %}">献立の投稿</a>
