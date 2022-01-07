@@ -30,7 +30,7 @@
         <li class="menu"><a href="{% url 'home' %}">履歴</a></li>
         {% if user.is_authenticated %}
           <li class="menu">
-            <a href="{% url 'post_new'  %}">レシピの投稿</a>
+            <a href="{% url 'post_new'  %}">献立の投稿</a>
           </li>
           <li class="menu">
             <a href="{% url 'account_logout' %}">ログアウト</a>

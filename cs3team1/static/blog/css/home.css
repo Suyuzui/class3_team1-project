@@ -154,16 +154,19 @@ a:hover {
      border-right: 2px solid #A2CA0E;/*矢印の色*/
      height: 15px;
      width: 15px;
+     z-index: 5;
  }
  
  .slick-prev {/*戻る矢印の位置と形状*/
      left: -1.5%;
      transform: rotate(-135deg);
+     z-index: 5;
  }
  
  .slick-next {/*次へ矢印の位置と形状*/
      right: -1.5%;
      transform: rotate(45deg);
+     z-index: 5;
  }
  
  /*ドットナビゲーションの設定*/
