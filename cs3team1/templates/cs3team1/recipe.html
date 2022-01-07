@@ -40,25 +40,40 @@
       <br>
       <h1 >レシピ <!-- django --></h1>
       <div class="text">
+      <h2>{{ title }}</h2> 
       <h2 class="text">材料</h2>
-      <ul>玉ねぎ</ul>
-      <ul>卵</ul>
-      <ul></ul>
-      <ul></ul>
-      <ul></ul>
+      <ul><strong>食材</strong>
+        <ul>{% for ingredient in ingredients %}
+          <li>{{ ingredient }}</li>
+        {% endfor %}
+        </ul>
+      </ul>
+      <ul><strong>調味料</strong>
+        <ul>{% for seasoning in seasonings %}
+            <li>{{ seasoning }}</li>
+        {% endfor %}
+        </ul>
+      </ul>
+      
     </div>
       <div class="text">
       <h2 class="text">作り方</h2>
-      <h6></h6> 
-    </div>
-      <div class="text">
-      <h2 class="text">ポイント</h2>
-      <h6></h6>
+      <ol>{% for item in howto %}
+        <li>{{ item }}</li>
+      {% endfor %}
+      </ol>
     </div>
       <div class="text">
       <h2 class="text">メモ</h2>
-      <h6></h6>
+      <ul>{{ memo }}</ul>
     </div>
+      <div class="text">
+        <h2 class="text">栄養成分表示</h2>
+        <ul>{% for item in nutrition_facts_label %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
     <br>
     <br>
 
