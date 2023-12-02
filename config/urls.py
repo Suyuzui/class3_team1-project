@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from cs3team1 import views as cs3team1_views
+#from cs3team1 import views as cs3team1_views
 from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
     path('', include('cs3team1.urls')),
-    path('ingredients',cs3team1_views.ingredient,name='ingredient'),
+    #path('ingredients',cs3team1_views.ingredient,name='ingredient'),
     path('recommendation', include('cs3team1.urls') ),
     path('recipe', include('cs3team1.urls') ),
     path('admin/',admin.site.urls),
